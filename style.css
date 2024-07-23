@@ -1,0 +1,392 @@
+body {
+    background-color: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #3c3c3c; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+main, footer, section, .timeline-card, .contact-item, .skills-card {
+    background-color: #3c3c3c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link {
+    color: #bb86fc;
+    text-decoration: none;
+}
+.lang-icon {
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer;
+}
+.section-title {
+    color: #03dac6;
+}
+#profile-image {
+    max-width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 1rem auto;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-card, .personal-skills {
+    perspective: 1000px;
+    width: 280px;
+    height: 320px;
+    margin: 1rem;
+    transition: all 0.3s ease;
+}
+
+.skills-card:hover, .personal-skills:hover,
+.skills-card:hover ~ .personal-skills,
+.personal-skills:hover ~ .skills-card {
+    width: 320px;
+    height: 420px;
+    z-index: 1;
+}
+
+.skills-card:hover ~ .personal-skills,
+.personal-skills:hover ~ .skills-card {
+    width: 240px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4c4c4c;
+    border: 1px solid #03dac6;
+    border-radius: 6px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    overflow-y: auto;
+    font-size: 0.9em;
+}
+
+.skills-card:hover .card-inner, .personal-skills:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #03dac6;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 30px;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 30px;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #3c3c3c;
+    border: 4px solid #03dac6;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -16px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -16px;
+}
+                                            
+.resume-card {
+    perspective: 1000px;
+    width: calc(100% - 30px);
+    height: 200px;
+    margin: 0;
+}
+
+.resume-card .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.resume-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.resume-card .card-front,
+.resume-card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4c4c4c;
+    border: 1px solid #03dac6;
+    border-radius: 6px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.resume-card .card-back {
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
+
+.timeline-date {
+    font-size: 1.2rem;
+    color: #bb86fc;
+    margin-bottom: 1rem;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item.hidden,
+.timeline.hidden,
+.section-subtitle.hidden {
+    display: none;
+}
+
+.timeline-item,
+.timeline,
+.section-subtitle {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.toggle-icon {
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon.rotated {
+    transform: rotate(180deg);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #4c4c4c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #e0e0e0;
+    flex-grow: 1;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+}
+
+.contact-text {
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.copy-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.profile-github-container {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+}
+#github-profile {
+    width: calc(66% - 20px);
+    margin-right: 20px;
+}
+
+#github-portfolio {
+    width: calc(34%);
+}
+
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-link {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.copy-icon-right {
+    width: 20px;
+    height: 20px;
+}
+
+.notification {
+    position: fixed;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #03dac6;
+    color: #1e1e1e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: bottom 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.notification.show {
+    bottom: 20px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media screen and (max-width: 600px) {
+    .timeline::before {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item::after {
+        left: 15px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0%;
+    }
+}

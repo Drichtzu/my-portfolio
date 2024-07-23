@@ -3,43 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine deutsche Webseite</title>
-    <meta name="description" content="Eine Beschreibung Ihrer Webseite">
-    <link rel="stylesheet" href="styles.css">
+    <title>Mein Portfolio - Quereinsteiger in der Webentwicklung</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Willkommen auf meiner Webseite</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Startseite</a></li>
-                <li><a href="#ueber-uns">Über uns</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link" data-translate="Über mich">Über mich</a></li>
+                    <li><a href="#skills" class="nav-link" data-translate="Fähigkeiten">Fähigkeiten</a></li>
+                    <li><a href="#projects" class="nav-link" data-translate="Projekte">Projekte</a></li>
+                    <li><a href="#resume" class="nav-link" data-translate="Lebenslauf">Lebenslauf</a></li>
+                    <li class="language-selector">
+                        <img src="img/de.png" alt="Deutsch" class="lang-icon" data-lang="de">
+                        <img src="img/en.png" alt="English" class="lang-icon hidden" data-lang="en">
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section id="home">
-            <h2>Startseite</h2>
-            <p>Willkommen auf unserer Webseite. Hier finden Sie Informationen über...</p>
-        </section>
+        <main>
+            <section id="about">
+                <h1 class="section-title" data-translate="Willkommen auf meiner Portfolio-Seite">Willkommen auf meiner Portfolio-Seite</h1>
+                <img src="placeholder.jpg" alt="Profilbild Platzhalter" id="profile-image">
+                <p class="about-text" data-translate="Hallo! Ich bin ein Quereinsteiger in der Webentwicklung.">Hallo! Ich bin ein Quereinsteiger in der Webentwicklung. Ursprünglich habe ich als Fleischer gearbeitet, aber meine Leidenschaft für Technologie hat mich dazu gebracht, mich neu zu orientieren.</p>
+            </section>
 
-        <section id="ueber-uns">
-            <h2>Über uns</h2>
-            <p>Wir sind ein Unternehmen, das sich auf...</p>
-        </section>
+            <section id="skills">
+                <h2 class="section-title" data-translate="Meine Fähigkeiten">Meine Fähigkeiten</h2>
+                <div class="skills-container">
+                    <div class="skills-card programming-skills">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="img/code.svg" alt="Code Icon" class="card-icon">
+                                <h3 class="card-title" data-translate="Meine Programmierkenntnisse">Meine Programmierkenntnisse</h3>
+                            </div>
+                            <div class="card-back">
+                                <div class="skills-grid">
+                                    <div class="skill-item">
+                                        <img src="img/html.svg" alt="HTML Icon" class="skill-icon">
+                                        <p data-translate="HTML">HTML</p>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="img/css.svg" alt="CSS Icon" class="skill-icon">
+                                        <p data-translate="CSS">CSS</p>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="img/js.svg" alt="JavaScript Icon" class="skill-icon">
+                                        <p data-translate="JavaScript">JavaScript</p>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="img/php.svg" alt="PHP Icon" class="skill-icon">
+                                        <p data-translate="PHP (Grundlagen)">PHP (Grundlagen)</p>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="img/database.svg" alt="Database Icon" class="skill-icon">
+                                        <p data-translate="MySQL (Grundlagen)">MySQL (Grundlagen)</p>
+                                    </div>
+                                    <div class="skill-item">
+                                        <img src="img/linux.svg" alt="Linux Icon" class="skill-icon">
+                                        <p data-translate="Linux">Linux</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-card personal-skills">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="img/strength.svg" alt="Strength Icon" class="card-icon">
+                                <h3 class="card-title" data-translate="Persönliche Stärken">Persönliche Stärken</h3>
+                            </div>
+                            <div class="card-back">
+                                <div class="skill-item">
+                                    <img src="img/accuracy.svg" alt="Accuracy Icon" class="skill-icon">
+                                    <p data-translate="Genauigkeit">Genauigkeit</p>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="img/group.svg" alt="Group Icon" class="skill-icon">
+                                    <p data-translate="Teamfähigkeit">Teamfähigkeit</p>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="img/learnnew.svg" alt="Learn New Icon" class="skill-icon">
+                                    <p data-translate="Bereitschaft, Neues zu lernen">Bereitschaft, Neues zu lernen</p>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="img/economic.svg" alt="Economic Icon" class="skill-icon">
+                                    <p data-translate="Kenntnisse in wirtschaftlichen Zusammenhängen">Kenntnisse in wirtschaftlichen Zusammenhängen</p>
+                                </div>
+                                <div class="skill-item">
+                                    <img src="img/organisation.svg" alt="Organisation Icon" class="skill-icon">
+                                    <p data-translate="Organisationstalent">Organisationstalent</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <section id="kontakt">
-            <h2>Kontakt</h2>
-            <p>Sie erreichen uns unter...</p>
-        </section>
-    </main>
+            <section id="projects">
+                <h2 class="section-title" data-translate="Meine Projekte">Meine Projekte</h2>
+                <div class="project-container">
+                    <div class="project" data-translate="Projekt 1">Projekt 1</div>
+                    <div class="project" data-translate="Projekt 2">Projekt 2</div>
+                    <div class="project" data-translate="Projekt 3">Projekt 3</div>
+                </div>
+            </section>                                                                                                       
+                                                                                                                                                            <!-- Lebenslauf -->            
+            <section id="resume">
+                <h2 class="section-title" data-translate="Lebenslauf">Lebenslauf</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-card resume-card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="img/food.svg" alt="Food Icon" class="card-icon">
+                                    <h3 class="card-title" data-translate="Fleischer bei Glück Auf">Fleischer bei Glück Auf</h3>
+                                </div>
+                                <div class="card-back">
+                                    <div class="timeline-date">Seit 07/2023</div>
+                                    <p class="card-description" data-translate="Fleischer bei der Glück Auf Fleisch und Wurstwaren GmbH">Fleischer bei der Glück Auf Fleisch und Wurstwaren GmbH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-card resume-card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="img/warehouse.svg" alt="Warehouse Icon" class="card-icon">
+                                    <h3 class="card-title" data-translate="Aushilfe im Warehouse">Aushilfe im Warehouse</h3>
+                                </div>
+                                <div class="card-back">
+                                    <div class="timeline-date">03/2023 - 06/2023</div>
+                                    <p class="card-description" data-translate="Aushilfe im Warehouse bei Logistikpark Stollberg">Aushilfe im Warehouse bei Logistikpark Stollberg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item hidden">
+                        <div class="timeline-card resume-card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="img/food.svg" alt="Food Icon" class="card-icon">
+                                    <h3 class="card-title" data-translate="Ausbildung zum Fleischer">Ausbildung zum Fleischer</h3>
+                                </div>
+                                <div class="card-back">
+                                    <div class="timeline-date">06/2022 - 07/2023</div>
+                                    <p class="card-description" data-translate="Ausbildung bei der Glück Auf Fleisch und Wurstwaren GmbH mit Abschluss zum Fleischer">Ausbildung bei der Glück Auf Fleisch und Wurstwaren GmbH mit Abschluss zum Fleischer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item hidden">
+                        <div class="timeline-card resume-card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="img/food.svg" alt="Food Icon" class="card-icon">
+                                    <h3 class="card-title" data-translate="Ausbildung zum Fleischer">Ausbildung zum Fleischer</h3>
+                                </div>
+                                <div class="card-back">
+                                    <div class="timeline-date">09/2020 - 06/2022</div>
+                                    <p class="card-description" data-translate="Ausbildung bei der Fleischerei Häußler">Ausbildung bei der Fleischerei Häußler</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="section-subtitle hidden" data-translate="Freiwilliges Engagement">Freiwilliges Engagement</h3>
+                <div class="timeline hidden">
+                    <div class="timeline-item">
+                        <div class="timeline-card resume-card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="img/fire_department.svg" alt="Fire Department Icon" class="card-icon">
+                                    <h3 class="card-title" data-translate="Einsatzabteilung der Feuerwehr Affalter">Einsatzabteilung der Feuerwehr Affalter</h3>
+                                </div>
+                                <div class="card-back">
+                                    <div class="timeline-date">01/2020 - 11/2023</div>
+                                    <p class="card-description" data-translate="Aktives Mitglied in der Einsatzabteilung">Aktives Mitglied in der Einsatzabteilung</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-card resume-card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="img/fire_department.svg" alt="Fire Department Icon" class="card-icon">
+                                    <h3 class="card-title" data-translate="Jugendfeuerwehr Lößnitz">Jugendfeuerwehr Lößnitz</h3>
+                                </div>
+                                <div class="card-back">
+                                    <div class="timeline-date">03/2014 - 01/2020</div>
+                                    <p class="card-description" data-translate="Mitglied der Jugendfeuerwehr">Mitglied der Jugendfeuerwehr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="section-subtitle hidden" data-translate="Schulischer Bildungsweg">Schulischer Bildungsweg</h3>
+                <div class="timeline hidden">
+                    <div class="timeline-item">
+                        <div class="timeline-card resume-card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="img/school.svg" alt="School Icon" class="card-icon">
+                                    <h3 class="card-title" data-translate="Oberschule Lößnitz">Oberschule Lößnitz</h3>
+                                </div>
+                                <div class="card-back">
+                                    <div class="timeline-date">08/2014 - 07/2020</div>
+                                    <p class="card-description" data-translate="Oberschule Lößnitz mit Realschulabschluss">Oberschule Lößnitz mit Realschulabschluss</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-card resume-card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="img/school.svg" alt="School Icon" class="card-icon">
+                                    <h3 class="card-title" data-translate="Grundschule Lößnitz Altstadt">Grundschule Lößnitz Altstadt</h3>
+                                </div>
+                                <div class="card-back">
+                                    <div class="timeline-date">08/2010 - 08/2014</div>
+                                    <p class="card-description" data-translate="Grundschulbildung">Grundschulbildung</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/arrow_down.svg" alt="Mehr anzeigen" id="toggleResumeIcon" class="toggle-icon">
+            </section>                                                                                                                                                                           
+                                                                                                                                                            <!-- Kontaktbereich -->
+            <section id="contact">
+                <h2 class="section-title" data-translate="Kontakt">Kontakt</h2>
+                <div class="contact-item">
+                    <a href="https://www.google.com/maps/place/Hauptstra%C3%9Fe+29,+08056+Zwickau/@50.7195,12.49626,17" target="_blank" class="contact-link" data-notification="Vielen Dank, dass Sie meine Adresse aufrufen.">
+                        <img src="img/navigation.svg" alt="Adresse" class="contact-icon">
+                        <div class="contact-text">
+                            <p data-translate="Philipp Meinel">Philipp Meinel</p>
+                            <p data-translate="Hauptstraße 29">Hauptstraße 29</p>
+                            <p data-translate="08056 Zwickau">08056 Zwickau</p>
+                        </div>
+                    </a>
+                    <img src="img/copy.svg" alt="Kopieren" class="copy-icon" data-copy="Philipp Meinel, Hauptstraße 29, 08056 Zwickau">
+                </div>
 
-    <footer>
-        <p>&copy; 2024 Meine Webseite. Alle Rechte vorbehalten.</p>
-    </footer>
+                <div class="contact-item">
+                    <a href="tel:015907005585" class="contact-link" data-notification="Vielen Dank, dass Sie mich anrufen möchten.">
+                        <img src="img/call.svg" alt="Telefon" class="contact-icon">
+                        <p class="contact-text">015907005585</p>
+                    </a>
+                    <img src="img/copy.svg" alt="Kopieren" class="copy-icon" data-copy="015907005585">
+                </div>
 
-    <script src="script.js"></script>
+                <div class="contact-item">
+                    <a href="mailto:philipp.meinel@freenet.de" class="contact-link" data-notification="Vielen Dank, dass Sie mir eine E-Mail schreiben möchten.">
+                        <img src="img/mail.svg" alt="E-Mail" class="contact-icon">
+                        <p class="contact-text">philipp.meinel@freenet.de</p>
+                    </a>
+                    <img src="img/copy.svg" alt="Kopieren" class="copy-icon" data-copy="philipp.meinel@freenet.de">
+                </div>
+                <div class="profile-github-container">
+                    <div class="contact-github" id="github-profile">
+                        <div class="contact-item">
+                            <div class="contact-box" id="github">
+                                <a href="https://github.com/Drichtzu" target="_blank" class="contact-link" data-notification="Danke sehr, dass Sie sich auf meinem GitHub-Profil umgesehen haben.">
+                                    <img src="img/github.svg" alt="GitHub" class="contact-icon">
+                                    <p class="contact-text">GitHub</p>
+                                </a>
+                                <img src="img/copy.svg" alt="Kopieren" class="copy-icon copy-icon-right" data-copy="https://github.com/Drichtzu">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-github" id="github-portfolio">
+                        <div class="contact-item">    
+                            <div class="contact-box">
+                                <a href="https://github.com/Drichtzu/my-portfolio" target="_blank" class="contact-link" data-notification="Vielen Dank für Ihr Interesse an meinem Portfolio-Repository.">
+                                    <img src="img/github.svg" alt="GitHub" class="contact-icon"> <!-- GitHub Bild vor dem Quellcode -->
+                                    <p class="contact-text" data-translate="Portfolio Repository">Portfolio Quellcode</p>
+                                </a>
+                                <img src="img/copy.svg" alt="Kopieren" class="copy-icon copy-icon-right" data-copy="https://github.com/Drichtzu/my-portfolio">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <a href="https://www.linkedin.com/in/philipp-meinel-632b9a317/" target="_blank" class="contact-link" data-notification="Vielen Dank, dass Sie mein LinkedIn-Profil aufgerufen haben.">
+                        <img src="img/linkedin.png" alt="LinkedIn" class="contact-icon">
+                        <p class="contact-text">LinkedIn</p>
+                    </a>
+                    <img src="img/copy.svg" alt="Kopieren" class="copy-icon" data-copy="https://www.linkedin.com/in/philipp-meinel-632b9a317/">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p class="footer-text" data-translate="© 2024 Mein Portfolio. Alle Rechte vorbehalten.">&copy; 2024 Mein Portfolio. Alle Rechte vorbehalten.</p>
+        </footer>
+    </div>
+
+    <div id="copyNotification" class="notification">
+        <p data-translate="In Zwischenablage kopiert">In Zwischenablage kopiert</p>
+    </div>
+
+    <div id="linkNotification" class="notification">
+        <p></p>
+    </div>
+
+    <script src="js/translation.js"></script>
+    <script src="js/expandTimeline.js"></script>
+    <script src="js/copyFunctionality.js"></script>
 </body>
 </html>
